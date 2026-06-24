@@ -3,6 +3,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f2f2f2;
 }
 
 #list {
@@ -10,6 +12,7 @@ body {
     width: 300px;
     border: 2px solid black;
     margin: 15px;
+    background-color: white;
 }
 
 #list {
@@ -22,3 +25,22 @@ body {
 li {
     list-style-position: inside;
 }
+
+li:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+ h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+ }
+
+ button {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ input {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+ }

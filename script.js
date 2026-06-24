@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const listItem = document.createElement("li");
         listItem.textContent = task;
         listContainer.appendChild(listItem);
+        inputField.value = "";
     }
 
     addBtn.addEventListener("click", addLi);
@@ -15,6 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.key === "Enter") {
             e.preventDefault();
             addLi();
+        }
+    });
+
+    listContainer.addEventListener("click", function(e) {
+        if (e.target.tagName === "LI") {
+            e.target.remove();
+        };
+    });
+
+    const clearBtn = document.getElementById("clearButton");
+    clearBtn.addEventListener("click", function() {
+        while (listContainer.firstChild) {
+            listContainer.removeChild(listContainer.firstChild);
         }
     });
 });
