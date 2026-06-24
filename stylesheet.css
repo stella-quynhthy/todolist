@@ -12,7 +12,13 @@ body {
     margin: 15px;
 }
 
-#list ul {
-    padding-left: 20px;
-    margin-left: 0px;
+#list {
+    padding-left: 15px;
+    margin: 0px;
+    list-style-position: inside;
+    text-align: left;
+}
+
+li {
+    list-style-position: inside;
 }
