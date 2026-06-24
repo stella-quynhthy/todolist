@@ -12,7 +12,7 @@ body {
     margin: 15px;
 }
 
-ul {
+#list ul {
     padding-left: 20px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
