@@ -4,14 +4,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputField = document.getElementById("addTask");
 
     function addLi() {
-        const task = inputField.value.trim();
-        const listItem = document.createElement("li");
-        listItem.textContent = task;
-        listContainer.appendChild(listItem);
-        inputField.value = "";
+        if (inputField.value === "") {
+            alert  ("Please enter a task into the text box")
+        } else {
+            const task = inputField.value.trim();
+            const listItem = document.createElement("li");
+            listItem.textContent = task;
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = "Remove";
+            removeBtn.addEventListener("click", ()=> {
+                listItem.remove();
+                })
+            listContainer.appendChild(listItem);
+            listItem.appendChild(removeBtn);
+            inputField.value = "";
+        }
     }
 
-    addBtn.addEventListener("click", addLi);
+    addBtn.addEventListener("click", () => {
+        addLi();
+        /*const removeBtn = document.createElement('button');
+        removeBtn.textContent = "Remove";
+        removeBtn.addEventListener("click", ()=> {
+            listItem.remove();
+            })*/
+});
     addBtn.addEventListener("keydown", function(e) {
         if (e.key === "Enter") {
             e.preventDefault();
@@ -19,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    listContainer.addEventListener("click", function(e) {
+    /*listContainer.addEventListener("click", function(e) {
         if (e.target.tagName === "LI") {
             e.target.remove();
         };
-    });
+    });*/
 
     const clearBtn = document.getElementById("clearButton");
     clearBtn.addEventListener("click", function() {

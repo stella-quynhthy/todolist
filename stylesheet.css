@@ -13,17 +13,18 @@ body {
     border: 2px solid black;
     margin: 15px;
     background-color: white;
-}
-
-#list {
     padding-left: 15px;
     margin: 0px;
-    list-style-position: inside;
+    /*list-style-position: inside;*/
     text-align: left;
+    overflow-y: auto;
 }
 
+
 li {
-    list-style-position: inside;
+    list-style-position: outside;
+    position: relative;
+    
 }
 
 li:hover {
